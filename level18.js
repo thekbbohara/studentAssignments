@@ -1,5 +1,4 @@
 let pocketMoney= 200
-
 //Q1. expected output: 
 //You can buy 20 kitkat with your pocketmoney
 // You can buy 10 dairymilk with your pocketmoney
@@ -19,4 +18,10 @@ const buyChocolate = (price, chocolate,quantity) => {
   return `You can buy ${_quantity} ${chocolate}(s) with your pocket money, and the remaining money is ${remainingMoney}.`;
 };
 
-console.log(buyChocolate(11, "KitKat",2));
+// console.log(buyChocolate(11, "KitKat",2));
+//Q2. 
+console.log(buyChocolate(10, 'kitkat', 3)) //arguments
+console.log(buyChocolate(20, 'dairymilk',4))
+//expected output is 
+// You have 170 Rs remaining
+// You have 90 Rs remaining
