@@ -25,3 +25,25 @@ console.log(buyChocolate(20, 'dairymilk',4))
 //expected output is 
 // You have 170 Rs remaining
 // You have 90 Rs remaining
+
+// Q3. convert the following syntax to ES6 arrow function
+
+const callMe =()=>{
+    return 'hi'
+}
+
+const buyChocolate = (price, chocolate,quantity) => {
+  if (pocketMoney < price) return `you are short on rs ${price-pocketMoney}`
+  if(quantity) {
+    const remainingMoney = pocketMoney - (quantity * price);
+    if (pocketMoney < price*quantity) return `you are short on rs ${price*quantity -pocketMoney}`
+    pocketMoney = remainingMoney 
+    return `You will have rs ${remainingMoney} remaining.`;
+  }
+  const _quantity = Math.floor(pocketMoney / price);
+  const remainingMoney = pocketMoney - (_quantity * price);
+  pocketMoney = remainingMoney 
+  return `You can buy ${_quantity} ${chocolate}(s) with your pocket money, and the remaining money is ${remainingMoney}.`;
+};
+
+console.log(buyChocolate(11, "KitKat",2));
